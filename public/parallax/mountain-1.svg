@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4228.796" height="1129.942" viewBox="0 0 4228.796 1129.942">
   <defs>
     <linearGradient id="linear-gradient" x1="0.496" y1="-0.121" x2="0.502" y2="0.874" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#de5654"/>
-      <stop offset="0.13" stop-color="#ce5254"/>
-      <stop offset="0.37" stop-color="#a74854"/>
-      <stop offset="0.7" stop-color="#673955"/>
-      <stop offset="1" stop-color="#282a57"/>
+      <stop offset="0" stop-color="#9C27B0"/>
+      <stop offset="0.13" stop-color="#7B1FA2"/>
+      <stop offset="0.37" stop-color="#6A1B9A"/>
+      <stop offset="0.7" stop-color="#4A148C"/>
+      <stop offset="1" stop-color="#6A1B9A"/>
     </linearGradient>
   </defs>
   <g id="mountain-1" transform="translate(-3898.812 -6192.585)">
