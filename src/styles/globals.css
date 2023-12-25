@@ -40,6 +40,15 @@ body {
     z-index: 3;
 }
 
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Adjust the z-index as needed */
+}
+
+
 .mountain-2 {
     bottom: 20px;
     z-index: 2;
@@ -55,7 +64,7 @@ body {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 20%;
 }
 
 .clouds-left {

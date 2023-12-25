@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import '@/styles/globals.css';
 
 function Parallax() {
 
@@ -16,6 +17,7 @@ function Parallax() {
     const stars = useRef(null);
     const sun = useRef(null);
     const logo = useRef(null);
+    const centerLogo = useRef(null);
     const copy = useRef(null);
     const btn = useRef(null);
 
@@ -53,6 +55,14 @@ function Parallax() {
                 mountain1.current,
                 {
                     y: "+=50",
+                },
+                0
+            );
+            tl.to(
+                centerLogo.current,
+                {
+                    y: "+=100",
+                    z: "+=50",
                 },
                 0
             );
@@ -119,6 +129,17 @@ function Parallax() {
         <div className="parallax-outer">
             <div ref={parallaxRef} style={{ background: `linear-gradient(#0F2B9C, #673D7D ${background}%, #A74A67, #EDFC54 )` }} className='parallax'>
                 <img ref={logo} className="logo" src="/parallax/logo.svg" />
+                <img ref={centerLogo}
+                    className='center-logo'
+                    src="/parallax/center-logo.svg"
+                    style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 4, 
+                    }} 
+                />
                 <img ref={mountain3} className='mountain-3' src="/parallax/mountain-3.svg" />
                 <img ref={mountain2} className='mountain-2' src="/parallax/mountain-2.svg" />
                 <img ref={mountain1} className='mountain-1' src="/parallax/mountain-1.svg" />
@@ -128,8 +149,8 @@ function Parallax() {
                 <img ref={cloudsRight} className='clouds-right' src="/parallax/clouds-right.svg" />
                 <img ref={stars} className='stars' src="/parallax/stars.svg" />
                 <div ref={copy} className="copy">
-                    <h5>NIT Warangal's</h5>
-                    <h1>E-Summit'24</h1>
+                    <h5>NIT Warangal&rsquo;s</h5>
+                    <h1>E-Summit 24</h1>
                     <p>Voyage of Visionaries</p>
                     <span ref={btn}>Enroll Now</span>
                 </div>
