@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import '@/styles/globals.css';
 
 function Parallax() {
 
@@ -61,10 +60,15 @@ function Parallax() {
             tl.to(
                 centerLogo.current,
                 {
-                    y: "+=100",
-                    z: "+=50",
+                    y: "-=50",
+                    scrollTrigger: {
+                        trigger: ".parallax", // Adjust this to match your scroll trigger element
+                        start: "top top", // Start the animation when the top of the trigger element hits the top of the viewport
+                        end: "bottom bottom", // End the animation when the bottom of the trigger element hits the bottom of the viewport
+                        scrub: true, // Smoothly adjust the position during scroll
+                      },
                 },
-                0
+                
             );
             tl.to(
                 sun.current,
@@ -149,9 +153,9 @@ function Parallax() {
                 <img ref={cloudsRight} className='clouds-right' src="/parallax/clouds-right.svg" />
                 <img ref={stars} className='stars' src="/parallax/stars.svg" />
                 <div ref={copy} className="copy">
-                    <h5>NIT Warangal&rsquo;s</h5>
-                    <h1>E-Summit 24</h1>
-                    <p>Voyage of Visionaries</p>
+                    <h5></h5>
+                    <h1></h1>
+                    <p></p>
                     <span ref={btn}>Enroll Now</span>
                 </div>
             </div>
